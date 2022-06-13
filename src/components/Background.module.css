@@ -1,0 +1,62 @@
+.BoxWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: inherit;
+  width: inherit;
+}
+
+.Text {
+  font-size: 24px;
+  color: #ee4266;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.Boxes {
+  height: 20vh;
+  width: 10%;
+}
+
+.BoxesFront,
+.BoxesBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  outline-offset: -3px;
+}
+
+.BoxesInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.BoxesFront {
+  background-color: #a0ecd0;
+  outline: 3px solid #fec9f1;
+}
+
+.BoxesBack {
+  background-color: #fec9f1;
+  outline: 3px solid #a0ecd0;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+}
+
+.Boxes:hover .BoxesInner {
+  transform: rotateY(180deg) scale(1.3);
+  z-index: 10;
+}
+
+@media screen and (max-width: 1450px) {
+  .Text {
+    font-size: 12px;
+  }
+}
