@@ -17,46 +17,29 @@
 .Boxes {
   height: 20vh;
   width: 10%;
-}
-
-.BoxesFront,
-.BoxesBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+  outline: 3px solid #ffbcd9;
   outline-offset: -3px;
+  transition: all .5s;
+  position:relative;
+  background-color: #A0ECD0;
 }
 
-.BoxesInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.3s;
-  transform-style: preserve-3d;
-}
-
-.BoxesFront {
-  background-color: #a0ecd0;
-  outline: 3px solid #fec9f1;
-}
-
-.BoxesBack {
-  background-color: #fec9f1;
-  outline: 3px solid #a0ecd0;
-  transform: rotateY(180deg);
-  border-radius: 15px;
-}
-
-.Boxes:hover .BoxesInner {
-  transform: rotateY(180deg) scale(1.3);
-  z-index: 10;
-}
-
-@media screen and (max-width: 1450px) {
-  .Text {
-    font-size: 12px;
-  }
+.Boxes:hover {
+    transform: translate(-15px, -15px);
+    box-shadow: 
+    1px 1px 0px #ffbcd9,
+    2px 2px 0px #ffbcd9,
+    3px 3px 0px #A0ECD0,
+    4px 4px 0px #A0ECD0,
+    5px 5px 0px #ffbcd9,
+    6px 6px 0px #ffbcd9,
+    7px 7px 0px #A0ECD0,
+    8px 8px 0px #A0ECD0,
+    9px 9px 0px #ffbcd9,
+    10px 10px 0px #ffbcd9,
+    11px 11px 0px #A0ECD0,
+    12px 12px 0px #A0ECD0,
+    13px 13px 0px #ffbcd9,
+    14px 14px 0px #ffbcd9,
+    15px 15px 0px #A0ECD0;
 }

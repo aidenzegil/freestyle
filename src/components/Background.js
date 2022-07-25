@@ -6,12 +6,7 @@ function makeBoxes(boxArray = []) {
 
   const newBox = (
     <div className={styles.Boxes}>
-      <div className={styles.BoxesInner}>
-        <div className={styles.BoxesFront}></div>
-        <div className={styles.BoxesBack}>
-            <p className={styles.Text}>This is my obnoxious background!</p>
-        </div>
-      </div>
+
     </div>
   );
 
